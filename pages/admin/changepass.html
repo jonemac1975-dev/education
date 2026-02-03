@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Change pass</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Change pass</h2>
+
+  <input type="password" id="old" placeholder="Pass old">
+  <input type="password" id="new" placeholder="Pass new">
+  <input type="password" id="confirm" placeholder="Confirm">
+
+  <div class="actions">
+    <button id="ok">OK</button>
+    <button onclick="location.href='admin.html'">Cancel</button>
+  </div>
+
+  <p id="msg"></p>
+</div>
+
+<script type="module" src="js/changepass.js"></script>
+</body>
+</html>

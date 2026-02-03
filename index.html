@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN NGÀNH CHẾ BIẾN MÓN ĂN</title>
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="/css/exam.css">
+
+<style>
+.auth-container{
+  max-width:420px;
+  margin:10px auto;
+  text-align:center;
+}
+
+.auth-box{
+  border:1px solid #ccc;
+  padding:12px;
+  margin-top:8px;
+  background:#fafafa;
+  border-radius:6px;
+}
+
+.auth-box input{
+  width:100%;
+  padding:8px;
+  margin:6px 0;
+}
+
+.hidden{
+  display:none;
+}
+
+.close{
+  background:#999;
+  color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+
+  <!-- nền (JS đổi ảnh 10s/lần) -->
+  <div class="header-bg"></div>
+
+  <!-- nội dung phủ -->
+  <div class="header-content">
+
+    <!-- CỤM AVATAR GÓC TRÁI -->
+    <div class="header-left">
+      <img id="schoolLogo" src="assets/logo.png" alt="Logo trường">
+      <img id="teacherAvatar" src="img/default_teacher.png" alt="Avatar giáo viên">
+    </div>
+
+    <!-- TIÊU ĐỀ GIỮA -->
+    <div class="header-center">
+      <h1>CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN NGÀNH CHẾ BIẾN MÓN ĂN</h1>
+      <h3 class="glow">Program Editor: Trần Thị Ngọc Dư - Nguyễn Huỳnh Ngọc Thanh</h3>
+      <marquee>Welcome To College of Commerce</marquee>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+<!-- ===== MENU ===== -->
+<nav class="menu">
+  <!-- MENU TRÁI -->
+  <div class="menu-left">
+    <button id="mBaiGiang">Lession</button>
+    <button id="mBaiTap">Practice</button>
+    <div class="test-login">
+ <button id="mTestEnglish">Test English</button> 
+</div>
+
+  </div>
+
+  <!-- MENU PHẢI -->
+<div class="menu-right">
+    <button onclick="showLogin()">Teacher Login</button>
+  <button onclick="showRegister()">Teacher Register</button>
+</div>
+
+
+  <!-- TREE -->
+  <div id="menuTree"></div>
+</nav>
+
+
+<!-- ===== KHU LOAD CHÍNH ===== -->
+<section id="main">
+  <div id="mainBg"></div>
+
+  <div id="mainContent">
+    <div id="previewZone"></div>
+    <div id="app"></div>
+  </div>
+</section>
+
+
+<!-- ===== KHU AUTH ẨN/HIỆN ===== -->
+<div class="auth-container hidden">
+
+  <!-- LOGIN -->
+  <div id="boxLogin" class="auth-box hidden">
+    <h3>Teacher Login</h3>
+
+    <input id="logID" placeholder="ID">
+<input id="logPass" type="password" placeholder="Pass">
+
+<button id="doLogin">Login</button>
+
+    <button class="close" onclick="hideAll()">Close</button>
+  </div>
+
+ <!-- REGISTER -->
+<div id="boxRegister" class="auth-box hidden">
+  <h3>Account Register</h3>
+
+  <input id="regID" placeholder="ID Teacher">
+  <input id="regPass" type="password" placeholder="Pass">
+  <input id="regPass2" type="password" placeholder="Pass again">
+
+  <button id="doRegister">Register</button>
+  <button class="close" onclick="hideAll()">Close</button>
+</div>
+
+
+</div>
+
+<!-- ===== NỘI DUNG TRANG CHỦ ===== -->
+
+<section id="below">
+
+  <div class="row3">
+    <div class="col">
+      <h3>Library</h3>
+      <div id="sachZone"></div>
+      <div id="tailieuZone"></div>
+    </div>
+
+    <div class="col">
+      <h3>Work</h3>
+      <div id="hoatdongZone"></div>
+    </div>
+
+    <!-- ===== CLIP / YOUTUBE ===== -->
+<div class="col">
+  <h3>Video / YouTube / Mp3</h3>
+  <div id="clipZone" class="clip-zone"></div>
+</div>
+
+
+  <div class="row2">
+    <div class="col">
+      <h3>News</h3>
+      <div id="thoisuZone"></div>
+    </div>
+
+    <div class="col">
+      <h3>Writting</h3>
+      <div id="baivietZone"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <a href="https://google.com">Google</a>
+  <span id="adminLock">🔒</span>
+</footer>
+
+<!-- ===== SCRIPT ĐIỀU KHIỂN FORM ===== -->
+<script>
+function hideAll(){
+  document.querySelector(".auth-container").classList.add("hidden");
+  document.getElementById("boxLogin").classList.add("hidden");
+  document.getElementById("boxRegister").classList.add("hidden");
+}
+
+function showLogin(){
+  hideAll();
+  document.querySelector(".auth-container").classList.remove("hidden");
+  document.getElementById("boxLogin").classList.remove("hidden");
+}
+
+function showRegister(){
+  hideAll();
+  document.querySelector(".auth-container").classList.remove("hidden");
+  document.getElementById("boxRegister").classList.remove("hidden");
+}
+</script>
+
+
+<script type="module" src="js/index.js"></script>
+
+</body>
+</html>
