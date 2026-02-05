@@ -669,3 +669,8 @@ z-index: 3000;
   font-weight: 600;
   line-height: 1.4;
 }
+/* ===== FIX ROW CUỐI FULL WIDTH ===== */
+.row2{
+  grid-column: 1 / -1;   /* chiếm từ cột 1 tới cột cuối */
+  width: 100%;
+}
